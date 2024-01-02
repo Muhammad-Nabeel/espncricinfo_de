@@ -1,80 +1,38 @@
-<div class="footer-area footer-bg">
-        <div class="container">
-            <div class="footer-top footer-padding">
-                <!-- footer Heading -->
-                <div class="footer-heading">
-                    <div class="row justify-content-between">
-                        <div class="col-xl-6 col-lg-8 col-md-8">
-                            <div class="wantToWork-caption wantToWork-caption2">
-                                <h2>We Understand The Importance Approaching Each Work!</h2>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4">
-                            <span class="contact-number f-right">+92 321 8311850</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Footer Menu -->
-                <div class="row d-flex justify-content-between">
-                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>COMPANY</h4>
-                                <ul>
-                                    <li><a href="{{ route('about-us') }}">About Us</a></li>
-                                    <li><a href="{{ route('services') }}">Services</a></li>
-                                    <li><a href="#"> Privacy Policy</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Open hour</h4>
-                                <ul>
-                                    <li><a href="#">Monday 11am-7pm</a></li>
-                                    <li><a href="#"> Tuesday-Friday 11am-8pm</a></li>
-                                    <li><a href="#"> Saturday 10am-6pm</a></li>
-                                    
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6">
-                        <div class="single-footer-caption mb-50">
-                            <!-- logo -->
-                            <div class="footer-logo">
-                                <a href="index.html"><img src="resources/img/logo/logo2_footer.png" alt=""></a>
-                            </div>
-                            <div class="footer-tittle">
-                                <div class="footer-pera">
-                                    <p class="info1">We are the leading service provider in the market</p>
-                                </div>
-                            </div>
-                            <!-- Footer Social -->
-                            <div class="footer-social ">
-                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fas fa-globe"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <div class="row d-flex align-items-center">
-                    <div class="col-lg-12">
-                        <div class="footer-copy-right text-center">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="container-fluid px-4">
+    <div class="row flex-row">
+        <div class="col col-md-2">
+            <h5>Fast Sports</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="{{ route('home') }}">Home</a></li>
+                <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="{{ route('about-us') }}">About us</a></li>
+            </ul>
         </div>
+
+        <div class="col col-md-2">
+            <h5>QUICK LINKS</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="/HOCKEY" class="nav-link p-0 text-muted">Hockey</a></li>
+                <li class="nav-item mb-2"><a href="/FOOTBALL" class="nav-link p-0 text-muted">Football</a></li>
+                <li class="nav-item mb-2"><a href="/BASKETBALL" class="nav-link p-0 text-muted">Basketball</a></li>
+            </ul>
+        </div>
+
+        <div class="col col-md-2">
+            <h5>MORE LINKS</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Tennis</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Rugby</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Badminton</a></li>
+                <li class="nav-item mb-2"><a href="{{ route('admin.auth.login') }}" class="nav-link p-0 text-muted">Admin Login</a></li>
+            </ul>
+        </div>
+
+        <div class="col col-md-5 offset-1">
+            <!-- Your content for the last column goes here -->
+        </div>
+
     </div>
+    <div class="d-flex justify-content-between py-4 my-4 border-top">
+        <p class="py-3">&copy; {{ date('Y') }} - Espncricinfo.de, Inc. All rights reserved.</p>
+    </div>
+</div>

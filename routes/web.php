@@ -14,8 +14,6 @@ use App\Http\Controllers\Admin\ShipController;
 |
 */
 
-
-
 Route::group(['namespace' => 'Web'], function () {
     Route::get('/', [WebController::class, 'home'])->name('home');
     Route::get('/about-us', [WebController::class, 'about_us'])->name('about-us');

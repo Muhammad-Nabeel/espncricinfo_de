@@ -1,62 +1,45 @@
-<div class="header-area" style="position: fixed;top: 0;width: 100%; z-index:99999;">
-        <div class="main-header ">
-            <div class="header-top d-none d-lg-block">
-                <div class="container">
-                    <div class="col-xl-12">
-                        <div class="row d-flex justify-content-between align-items-center">
-                            <div class="header-info-left">
-                                <ul>     
-                                    <li>Phone: +92 321 8311850</li>
-                                    <li>Email: support@jnkwwe.com</li>
-                                </ul>
+<nav class="navbar navbar-expand-sm navbar-toggleable-md navbar-light border-bottom box-shadow">
+            <div class="container-fluid px-4">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="{{asset('/assets/front-end')}}/img/logo/logo.png" alt="logo-FS" width="150" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 custom-header">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('home') }}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('about-us') }}">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-bs-target=".dropdown-menu" aria-haspopup="true" aria-expanded="false">
+                                All Sports
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/HOCKEY">Hockey</a>
+                                <a class="dropdown-item" href="/FOOTBALL">Football</a>
+                                <a class="dropdown-item" href="/BASKETBALL">Basket Ball</a>
+                                <a class="dropdown-item" href="/CRICKET">Cricket</a>
+                                <a class="dropdown-item" href="/BADMINTON">Badminton</a>
                             </div>
-                            <div class="header-info-right">
-                                <ul class="header-social">    
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-row px-4 disable-sigin">
+                    <a class="btn btn-outline-dark" asp-area="" asp-controller="Auth" asp-action="SignIn">
+                        <span class="align-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" data-testid="icon" class="fill-current-color text-br-2-90 lg:mr-2">
+                                <path d="M24 18a4 4 0 014 4v8.5H4V22a4 4 0 014-4h16zm0 3H8a1 1 0 00-1 1v5.5h18V22a1 1 0 00-1-1zM16 1.5h.24a7.37 7.37 0 11-.24 0zm0 3a4.25 4.25 0 104.25 4.25A4.26 4.26 0 0016 4.5z" fill-rule="evenodd"></path>
+                            </svg>
+                        </span>
+                        <span class="align-middle">
+                            SIGN IN
+                        </span>
+                    </a>
                 </div>
             </div>
-            <div class="header-bottom  header-sticky">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <!-- Logo -->
-                        <div class="col-xl-2 col-lg-2">
-                            <div class="logo">
-                                <a href="{{ route('home') }}"><img src="{{asset('/assets/front-end')}}/img/logo/logo.png" alt="JNKWWE-LOGO"></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-10 col-lg-10">
-                            <div class="menu-wrapper  d-flex align-items-center justify-content-end">
-                                <!-- Main-menu -->
-                                <div class="main-menu d-none d-lg-block">
-                                    <nav> 
-                                        <ul id="navigation">                                                                                          
-                                            <li><a href="{{ route('home') }}">Home</a></li>
-                                            <li><a href="{{ route('about-us') }}">About</a></li>
-                                            <li><a href="{{ route('services') }}">Services</a></li>
-                                            <li><a href="{{ route('contact-us') }}">Contact</a></li>
-                                            <li class="d-md-none d-lg-none"><a href="{{ route('admin.auth.login') }}">Admin Login</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <!-- Header-btn -->
-                                <div class="header-right-btn d-none d-lg-block ml-20">
-                                    <a href="{{ route('admin.auth.login') }}" class="btn header-btn">Admin Login</a>
-                                </div>
-                            </div>
-                        </div> 
-                        <!-- Mobile Menu -->
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        </nav>

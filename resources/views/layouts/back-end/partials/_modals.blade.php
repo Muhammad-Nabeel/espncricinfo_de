@@ -128,33 +128,9 @@
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" id="pdfDocket" onclick="getInvoiceLabel()">Invoice</button>
-        <button type="button" class="btn btn-primary" id="shipLabel" onclick="getShippingLabel()">Shipping Label</button>
+        <button type="button" class="btn btn-secondary" id="pdfDocket">Invoice</button>
+        <button type="button" class="btn btn-primary" id="shipLabel" >Shipping Label</button>
       </div>
     </div>
   </div>
 </div>
-
-<script>
-    function getShippingLabel(){
-      var shipid = $("#shipmentTrack").attr("data-shipid");
-      // Build the URL with the parameter
-      var url = "{{ route('admin.shipping-label', ':shippingid') }}";
-        url = url.replace(':shippingid', shipid);
-
-        // Open a new tab with the URL
-        window.open(url, '_blank');
-    }
-
-    function getInvoiceLabel(){
-      var shipid = $("#shipmentTrack").attr("data-shipid");
-      // Build the URL with the parameter
-      var url = "{{ route('admin.shipping-invoice', ':shippingid') }}";
-        url = url.replace(':shippingid', shipid);
-
-        // Open a new tab with the URL
-        window.open(url, '_blank');
-    }
-
-
-</script>

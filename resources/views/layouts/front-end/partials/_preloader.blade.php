@@ -1,11 +1,6 @@
+<link href="{{asset('/assets/front-end')}}/css/loader.css" rel="stylesheet" />
 
-<div id="preloader-active">
-    <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="preloader-inner position-relative">
-            <div class="preloader-circle"></div>
-            <div class="preloader-img pere-text">
-                <img src="{{asset('/assets/front-end')}}/img/logo/logo.png" alt="">
-            </div>
-        </div>
-    </div>
+<div class="lineloader-wrapper backColor">
+    <span class="loading-text d-block headsize h4">Loading...</span>
+    <span class="lineLoader l d-block"></span>
 </div>

@@ -5,24 +5,19 @@
   </button>
 </div>
 <div class="p-4">
-  <h1>
-    <a href="/" class="logo">JNK WWE <span> Admin Dashboard</span>
+  <h5>
+    <a href="/" class="logo" style="color:white;">ESPN CRICINFO <br /> <span> Admin Dashboard</span>
     </a>
-  </h1>
+  </h5>
   <ul class="list-unstyled components mb-5">
   <li class="{{ Route::currentRouteName() === 'admin.dashboard' ? 'active' : '' }}">
   <a href="{{ route('admin.dashboard') }}">
     <span class="fa fa-home mr-3"></span> Home
   </a>
 </li>
-<li class="{{ Route::currentRouteName() === 'admin.add_shipment' ? 'active' : '' }}">
-  <a href="{{ route('admin.add_shipment') }}">
-    <span class="fa fa-user mr-3"></span> Add Shipment
-  </a>
-</li>
-<li class="{{ Route::currentRouteName() === 'admin.update_shipment' ? 'active' : '' }}">
-  <a href="{{ route('admin.update_shipment') }}">
-    <span class="fa fa-briefcase mr-3"></span> Update Shipment
+<li class="{{ Route::currentRouteName() === 'admin.add_post' ? 'active' : '' }}">
+  <a href="{{ route('admin.add_post') }}">
+    <span class="fa fa-user mr-3"></span> Add Post
   </a>
 </li>
 <li>

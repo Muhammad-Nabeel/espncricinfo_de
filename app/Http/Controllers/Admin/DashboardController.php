@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Shipment;
+use App\Models\Category;
 
 
 class DashboardController extends Controller
@@ -20,29 +20,9 @@ class DashboardController extends Controller
         return view('admin-views.system.dashboard',compact('success'));
     }
 
-    public function add_shipment()
+    public function add_post()
     {
-        return view('admin-views.shipment.add-shipment');
-    }
-
-    public function get_parcelfields($index)
-    {
-        // Your logic to retrieve the content of the _parcel-fields view
-        $parcelFields = view('admin-views.shipment.partials._parcel-fields', ['index' => $index])->render();
-        return response()->json(['parcelFields' => $parcelFields]);
-    }
-
-    public function shipping_label($shippingid)
-    {
-
-        $shipment = Shipment::with(['deliveryAddress','pickupAddress'])->find($shippingid);
-        return view('admin-views.shipment.shipping-label',['shipment'=>$shipment]);
-    }
-
-    public function shipping_invoice($shippingid)
-    {
-
-        $shipment = Shipment::with(['deliveryAddress','pickupAddress'])->find($shippingid);
-        return view('admin-views.shipment.shipping-invoice',['shipment'=>$shipment]);
+        $categories = Category::pluck('CategoryTitle', 'id');
+        return view('admin-views.post.add-post', compact('categories'));
     }
 }

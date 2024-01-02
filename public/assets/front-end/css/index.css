@@ -1,0 +1,14 @@
+.gameSlider {
+    margin: 0;
+    width: 100%;
+}
+
+#fastVideo {
+    min-height: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+    #fastVideo {
+        min-height: 300px;
+    }
+}

@@ -1,0 +1,154 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn .fa {
+    color: white;
+}
+
+.btn-floating {
+    border-radius: 50px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    /*margin-bottom: 60px;*/
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+/*.bg-custom-color {
+    background: linear-gradient(to right, #1A44AA 0%, #a30381 100%);
+}*/
+
+.custom-header .nav-link {
+    border-bottom: 5px solid white;
+}
+
+.custom-header .nav-link:hover {
+    border-bottom: 5px solid #851275;
+}
+
+.bd-footer .fa {
+    /*font-size: 30px;*/
+    text-align: center;
+    text-decoration: none;
+    margin-right: 10px;
+    color: grey;
+}
+
+.fa-facebook {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.live-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    top: 6px;
+    border-radius: 72px;
+    left: 33px;
+}
+
+.sec-banner-style-2 img {
+    width: auto;
+}
+
+.index-content .sec-content-style-1 {
+    bottom: 24px;
+    background-color: #1e1e1e;
+}
+
+.breadcrumb-item a {
+    background-color: gray;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.breadcrumb-item.active a {
+    background-color: #1a44aa;
+}
+
+element {
+    --bs-breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E");
+}
+
+.min-height {
+    min-height: 300px;
+}
+
+.disable-sigin {
+    display: none;
+}

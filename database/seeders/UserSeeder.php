@@ -14,8 +14,8 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::create([
-            'name' => 'JNK Admin',
-            'email' => 'support@jnkwwe.com',
+            'name' => 'ESPN Admin',
+            'email' => 'support@espncricinfo.com',
             'password' => Hash::make('Admin@123'),
         ]);
     }

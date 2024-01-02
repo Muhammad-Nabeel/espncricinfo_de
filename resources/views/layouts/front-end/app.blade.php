@@ -9,46 +9,31 @@
     <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.ico">
     <!-- CSS here -->
     <link rel="stylesheet" href="{{asset('/assets/front-end')}}/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{asset('/assets/front-end')}}/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="{{asset('/assets/front-end')}}/css/slicknav.css">
-    <link rel="stylesheet" href="{{asset('/assets/front-end')}}/css/flaticon.css">
-    <link rel="stylesheet" href="{{asset('/assets/front-end')}}/css/animate.min.css">
-    <link rel="stylesheet" href="{{asset('/assets/front-end')}}/css/magnific-popup.css">
-    <link rel="stylesheet" href="{{asset('/assets/front-end')}}/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="{{asset('/assets/front-end')}}/css/themify-icons.css">
-    <link rel="stylesheet" href="{{asset('/assets/front-end')}}/css/slick.css">
-    <link rel="stylesheet" href="{{asset('/assets/front-end')}}/css/nice-select.css">
-    <link rel="stylesheet" href="{{asset('/assets/front-end')}}/css/style.css">
-    <link rel="stylesheet" href="{{asset('/assets/back-end')}}/css/toastr.min.css">
-    
+    <link rel="stylesheet" href="{{asset('/assets/front-end')}}/css/site.css">
 </head>
 <body>
     @include('layouts.front-end.partials._modals')
-<!--? Preloader Start -->
-    @include('layouts.front-end.partials._preloader')
-<!-- Preloader Start -->
 <header>
     <!-- Header Start -->
     @include('layouts.front-end.partials._header')
     <!-- Header End -->
 </header>
-<main>
-   <!-- Page Content-->
-    @yield('content')
-</main>
-<footer>
+<div class="container-fluid">
+        <main role="main" class="pb-3 min-height">
+        <!-- Page Content-->
+             @yield('content')
+        </main>
+</div>
+<footer class="bd-footer py-4 mt-5 bg-light border-top">
     <!--? Footer Start-->
     @include('layouts.front-end.partials._footer')
     <!-- Footer End-->
 </footer>
-<!-- Scroll Up -->
-<div id="back-top" >
-    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
-</div>
 
-    <!-- JS here -->
 
-    <script src="{{asset('/assets/front-end')}}/js/vendor/modernizr-3.5.0.min.js"></script>
+ <!-- JS here -->
+
+ <script src="{{asset('/assets/front-end')}}/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="{{asset('/assets/front-end')}}/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="{{asset('/assets/front-end')}}/js/popper.min.js"></script>
