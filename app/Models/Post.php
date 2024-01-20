@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Category;
 //use Tonysm\RichTextLaravel\Models\Traits\HasRichText;
 
 class Post extends Model
@@ -24,7 +25,8 @@ class Post extends Model
         'PostMediaType',
         'PostThumb',
         'PostModifiedDate',
-        'categoryId'
+        'categoryId',
+        'Slug'
     ];
 
     //protected $richTextFields = ['PostDescription'];
@@ -52,4 +54,9 @@ class Post extends Model
      * @var bool
      */
     public $timestamps = false;
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'categoryId', 'Id');
+    }
 }

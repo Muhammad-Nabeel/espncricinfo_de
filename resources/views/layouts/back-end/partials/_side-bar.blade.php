@@ -20,6 +20,11 @@
     <span class="fa fa-user mr-3"></span> Add Post
   </a>
 </li>
+<li class="{{ Route::currentRouteName() === 'admin.add_post' ? 'active' : '' }}">
+  <a href="{{ route('admin.post_list') }}">
+    <span class="fa fa-user mr-3"></span> Post List
+  </a>
+</li>
 <li>
   <a href="{{ route('admin.auth.logout') }}">
     <span class="fa fa-briefcase mr-3"></span> Logout

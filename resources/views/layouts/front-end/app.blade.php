@@ -10,6 +10,19 @@
     <!-- CSS here -->
     <link rel="stylesheet" href="{{asset('/assets/front-end')}}/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{asset('/assets/front-end')}}/css/site.css">
+
+    <style>
+    .card-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .read-more {
+        /* Add styles for your "Read more" link if needed */
+        color: blue; /* Example color */
+    }
+</style>
 </head>
 <body>
     @include('layouts.front-end.partials._modals')

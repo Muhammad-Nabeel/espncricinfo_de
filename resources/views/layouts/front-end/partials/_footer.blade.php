@@ -1,7 +1,7 @@
 <div class="container-fluid px-4">
     <div class="row flex-row">
         <div class="col col-md-2">
-            <h5>Fast Sports</h5>
+            <h5>Espncricinfo.de</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="{{ route('home') }}">Home</a></li>
                 <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="{{ route('about-us') }}">About us</a></li>

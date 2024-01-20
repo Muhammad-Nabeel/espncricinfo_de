@@ -9,6 +9,8 @@ use App\Models\Post;
 use App\Models\PostCategory;
 use App\Models\Category;
 use App\Library\ImageManager;
+use Illuminate\Support\Str;
+
 
 class PostController extends Controller{
 
@@ -18,6 +20,7 @@ class PostController extends Controller{
         $request->validate([
             'PostTitle' => 'required|string|max:255',
             'PostDescription' => 'required|string|max:3000',
+            'PostMedia' => 'required|string|max:255',
             'file.*' => 'file|mimetypes:video/*,image/*|max:20480' // Allow both images and videos, adjust max size if needed // Allow multiple files
             // Add validation rules for other fields
         ]);
@@ -38,7 +41,6 @@ class PostController extends Controller{
             $filePath = json_encode($attachmentFileNames);
         }
 
-        
         // Create a new Post instance using create method
         $post = Post::create([
             'PostTitle' => $request->input('PostTitle'),
@@ -46,7 +48,8 @@ class PostController extends Controller{
             'PostMedia' => $request->input('PostMedia'),
             'PostMediaType' => $request->input('PostMediaType'),
             'PostThumb' => $filePath,
-            'categoryId'=> $request->input('categoryId')
+            'categoryId'=> $request->input('categoryId'),
+            'Slug' => Str::slug($request->input('PostTitle'))
         ]);
 
         $categories = Category::pluck('CategoryTitle', 'id');

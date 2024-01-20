@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Web\SitemapController;
 use App\Http\Controllers\Web\WebController; // Use the correct namespace path
-use App\Http\Controllers\Admin\ShipController;
+use App\Http\Controllers\Web\PostController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,4 +22,8 @@ Route::group(['namespace' => 'Web'], function () {
     Route::get('/services', [WebController::class, 'services'])->name('services');
     Route::get('/contact-us', [WebController::class, 'contact_us'])->name('contact-us');
     Route::post('/track-status', [ShipController::class, 'track_status'])->name('track-status');
+    Route::get('/sitemap.xml', [SitemapController::class, 'generate'])->name('sitemap');
+    Route::get('/{category?}', [PostController::class, 'category'])->name('{category?}');
+    Route::get('/{category}/{slug}', [PostController::class, 'post'])->name('category.slug');
+
 });

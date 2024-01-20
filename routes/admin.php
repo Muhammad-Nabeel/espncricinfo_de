@@ -17,8 +17,9 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'as' => 'admin.'], fu
     });
 
     Route::group(['middleware' => ['admin']], function () {
-        Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');//previous dashboard route
-        Route::post('/add_post', [PostController::class, 'storePost'])->name('add_post');
-        Route::get('/add_post', [DashboardController::class, 'add_post'])->name('add_post');//add shipment route
+        Route::get('/main/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');//previous dashboard route
+        Route::post('/main/add_post', [PostController::class, 'storePost'])->name('add_post');
+        Route::get('/main/add_post', [DashboardController::class, 'add_post'])->name('add_post');//add shipment route
+        Route::get('/main/post_list', [DashboardController::class, 'post_list'])->name('post_list');//add shipment route
     });
 });

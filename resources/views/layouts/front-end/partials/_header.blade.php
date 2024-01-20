@@ -20,11 +20,13 @@
                                 All Sports
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/HOCKEY">Hockey</a>
-                                <a class="dropdown-item" href="/FOOTBALL">Football</a>
-                                <a class="dropdown-item" href="/BASKETBALL">Basket Ball</a>
-                                <a class="dropdown-item" href="/CRICKET">Cricket</a>
-                                <a class="dropdown-item" href="/BADMINTON">Badminton</a>
+
+                            @foreach (\App\Models\Category::all() as $category)
+                                <a class="dropdown-item" href="/{{ $category->CategoryTitle }}">{{ $category->CategoryTitle }}</a>
+                            @endforeach
+
+
+                               
                             </div>
                         </li>
                     </ul>
